@@ -42,6 +42,18 @@ public class TestAlbum {
 
         a1.playTrack(trackNumber);
 
+        int shuffle = JOptionPane.showConfirmDialog(null,"Do You wish to shuffle?","Shuffle?",JOptionPane.YES_NO_CANCEL_OPTION);
+
+        if(shuffle==JOptionPane.YES_OPTION){
+            //a1.shuffle();
+        }
+        else if(shuffle==JOptionPane.NO_OPTION){
+            JOptionPane.showMessageDialog(null,"You Choose not to shuffle");
+        }
+        else
+            JOptionPane.showMessageDialog(null,"Nothing Selected");
+
+
         System.exit(0);
 
 

@@ -94,6 +94,19 @@ public class Album {
             JOptionPane.showMessageDialog(null,"An invalid track number was supplied!","Bad Track Number",JOptionPane.ERROR_MESSAGE);
     }
 
+    public void shuffle(){
+
+        Song songs[]=new Song[5];
+
+        for(int i=0;i<tracks.length;i++){
+            songs[i]=tracks[(int)(Math.random()*5)];
+        }
+
+
+
+
+    }
+
     @Override
     public String toString() {
         return  "name='" + name + '\'' +
