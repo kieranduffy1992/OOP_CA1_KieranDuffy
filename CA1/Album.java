@@ -52,11 +52,43 @@ public class Album {
         this.releaseYear = releaseYear;
     }
 
+    public int getNumberOfTracks(){
+        int numberOfTracks=0;
+
+        for(int i=0;i<tracks.length;i++){
+            if(tracks[i] !=null){
+                numberOfTracks++;
+            }
+        }
+        return numberOfTracks;
+
+    }
+
+    public int getPlayingTime(){
+
+        int totalPlayingTime=0;
+
+        for(int i=0;i<tracks.length;i++){
+            totalPlayingTime+=tracks[i].getDuration();
+        }
+
+        return totalPlayingTime;
+    }
+
     public void playTrack(int number){
+
+
         if(number >= 1 && number <= 5)
         {
+            Song song = null;
 
-
+            for(int i=0;i<tracks.length;i++){
+                if(tracks[i].getTrackNumber() ==number){
+                    song = tracks[i];
+                }
+            }
+            JOptionPane.showMessageDialog(null,"Now playing track-details as follows\n\n"+song,
+                   "Playing Track",JOptionPane.INFORMATION_MESSAGE);
         }
         else
             JOptionPane.showMessageDialog(null,"An invalid track number was supplied!","Bad Track Number",JOptionPane.ERROR_MESSAGE);

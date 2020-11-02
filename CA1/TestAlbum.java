@@ -26,7 +26,7 @@ public class TestAlbum {
         textArea.setFont(font);
 
         textArea.setText("Name: "+a1.getName()+"\n\nProducer: "+a1.getProducer()+"\n\nRelease Year: "+a1.getReleaseYear()+
-                "\n\nNumber of Tracks: " +"\n\nTotal Playing Time: "+"\n\n\t\tAlbum Tracks\n\n");
+                "\n\nNumber of Tracks: "+a1.getNumberOfTracks() +"\n\nTotal Playing Time: "+a1.getPlayingTime()+"\n\n\t\tAlbum Tracks\n\n");
 
         String output =String.format("\n%-20s%-30s%-15s\n","Track Number","Title","Artist");
 
@@ -38,7 +38,11 @@ public class TestAlbum {
 
         JOptionPane.showMessageDialog(null,textArea,"Album Information",JOptionPane.INFORMATION_MESSAGE);
 
-        int playTrack = Integer.parseInt(JOptionPane.showInputDialog("Which track would you like to play?"));
+        int trackNumber = Integer.parseInt(JOptionPane.showInputDialog("Which track would you like to play?"));
+
+        a1.playTrack(trackNumber);
+
+        System.exit(0);
 
 
 
