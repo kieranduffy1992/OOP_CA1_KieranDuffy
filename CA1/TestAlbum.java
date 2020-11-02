@@ -45,7 +45,7 @@ public class TestAlbum {
         int shuffle = JOptionPane.showConfirmDialog(null,"Do You wish to shuffle?","Shuffle?",JOptionPane.YES_NO_CANCEL_OPTION);
 
         if(shuffle==JOptionPane.YES_OPTION){
-            //a1.shuffle();
+            a1.shuffle();
         }
         else if(shuffle==JOptionPane.NO_OPTION){
             JOptionPane.showMessageDialog(null,"You Choose not to shuffle");

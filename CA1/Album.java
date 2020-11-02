@@ -97,10 +97,15 @@ public class Album {
     public void shuffle(){
 
         Song songs[]=new Song[5];
+        String output="";
 
         for(int i=0;i<tracks.length;i++){
             songs[i]=tracks[(int)(Math.random()*5)];
+            output+=songs[i]+"\n";
         }
+
+        JOptionPane.showMessageDialog(null,"Shuffled playlist is as follows:\n\n"+output,
+                "Shuffled Playlist",JOptionPane.INFORMATION_MESSAGE);
 
 
 
